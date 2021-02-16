@@ -1,10 +1,10 @@
 #include "Dog.h"
 
 Dog::Dog() {
-    this->SetType("狗");
+    this->set_type("狗");
 }
 
 Dog::Dog(const string &name) {
-    this->SetType("狗");
-    this->SetName(name);
+    this->set_type("狗");
+    this->set_name(name);
 }

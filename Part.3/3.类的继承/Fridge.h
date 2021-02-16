@@ -3,7 +3,7 @@
 
 class Fridge {
 	//我们定义一个变量 存储冰箱门是否打开
-	bool doorStatus;
+	bool door_status_;
 public:
 	//冰箱的构造函数
 	Fridge();

@@ -3,25 +3,25 @@
 //我们在源文件里实现他的功能
 
 Animal::Animal() :
-	_type("动物"), _name("无名") {
+	type_("动物"), name_("无名") {
 }
 
 Animal::Animal(const string &name) :
-	_type("动物"), _name(name) {
+	type_("动物"), name_(name) {
 }
 
-void Animal::SetType(const string &type) {
-	this->_type = type;
+void Animal::set_type(const string &type) {
+	this->type_ = type;
 }
 
-void Animal::SetName(const string &name) {
-	this->_name = name;
+void Animal::set_name(const string &name) {
+	this->name_ = name;
 }
 
-string Animal::GetType() const {
-	return this->_type;
+string Animal::get_type() const {
+	return this->type_;
 }
 
-string Animal::GetName() const {
-	return this->_name;
+string Animal::get_name() const {
+	return this->name_;
 }
