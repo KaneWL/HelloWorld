@@ -15,13 +15,18 @@ using std::endl;
 #define PI_DEF 3.1415926f
 
 //第二种形式 只需要在定义变量前加上const关键词即可
-const float PI_CONST = 3.1415926f;
+const float kPiConst = 3.1415926f;
 
 //扩展: 使用constexpr可以告知编译器 这个值在编译的时候就能确定了
-constexpr float PI_CONSTEXPR = 3.1415926f;
+constexpr float kPiConstexpr = 3.1415926f;
 
 int main() {
 	cout << "PI_DEF的值为:" << PI_DEF << endl;
-	cout << "PI_CONST的值为:" << PI_CONST << endl;
-	cout << "PI_CONSTEXPR的值为:" << PI_CONSTEXPR << endl;
+	cout << "kPiConst的值为:" << kPiConst << endl;
+	cout << "kPiConstexpr的值为:" << kPiConstexpr << endl;
 }
+
+/* 特别注意:
+ * 当你使用宏定义(#define)时 应使用大写字母与下划线的组合  这是宏定义的命名规范
+ * 当你使用const constexpr关键词时应使用 以小写字母k开头 并且后面的单词按照驼峰式的规范来命名
+ */

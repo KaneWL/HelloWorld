@@ -14,11 +14,11 @@
 * 很简单 请看:
 */
 
-int add(int a, int b) {
+int Add(int a, int b) {
 	return a + b;
 }
 
-double add(double a, double b) {
+double Add(double a, double b) {
 	return a + b;
 }
 
@@ -31,17 +31,17 @@ double add(double a, double b) {
 */
 
 //我可以不要参数
-int add() {
+int Add() {
 	return 1 + 1;
 }
 
 //我可以给一个参数
-double add(double a) {
+double Add(double a) {
 	return 1.0 + a;
 }
 
 //我可以给不同类型的形参 个数一样
-double add(int a, double b) {
+double Add(int a, double b) {
 	//这里涉及到类型的强制转换 直接在变量的前面加上(需要转换的类型) 即可
 	return (double)a + b;
 }
@@ -49,10 +49,10 @@ double add(int a, double b) {
 //但是 下面这几个是不行的
 
 //返回值不同不属于重载
-//string add(int a ,int b);
+//string Add(int a_ ,int b);
 
 //形参名字不一样 不属于重载
-//int add(int x, int y);
+//int Add(int x, int y);
 
 class A {
 public:
@@ -66,19 +66,19 @@ int main() {
 	//我们在main函数里调用试试看吧！
 
 	//调用没有参数的加法
-	add();
+	Add();
 
 	//调用一个参数的加法
-	add(1.0);
+	Add(1.0);
 
 	//调用两个整数的加法
-	add(3, 5);
+	Add(3, 5);
 
 	//调用两个小数的加法
-	add(3.0, 5.0);
+	Add(3.0, 5.0);
 
 	//调用一个整数一个小数的加法
-	add(3, 5.0);
+	Add(3, 5.0);
 
 	//这些都是合法的重载
 	//动手试一试减法吧！

@@ -18,14 +18,14 @@ using std::endl;
 //当我们要具体实现一个类中的函数时 使用类名::函数名的形式即可
 void A::print() {
 	//我们让print输出abc的值
-	cout << "a=" << this->a << "b=" << this->b << "c=" << this->c << endl;
+	cout << "a_=" << this->a_ << "b_=" << this->b_ << "c_=" << this->c_ << endl;
 }
 
 //构造函数同理
 A::A(int a, int b, int c) {
-	this->a = a;
-	this->b = b;
-	this->c = c;
+	this->a_ = a;
+	this->b_ = b;
+	this->c_ = c;
 }
 
 /* 这里我们讲一下构造函数的另一种初始化方式 列表初始化法
@@ -40,7 +40,7 @@ A::A(int a, int b, int c) {
 * 我们使用列表初始化法就是一手的了
 */
 A::A() :
-	a(0), b(0), c(0) {
+	a_(0), b_(0), c_(0) {
 }
 
 /*

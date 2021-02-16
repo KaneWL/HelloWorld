@@ -9,7 +9,7 @@ class Elephant :
 public:
     Elephant();
 
-    Elephant(const string &name);
+    explicit Elephant(const string &name);
 };
 
 /*

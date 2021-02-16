@@ -11,13 +11,13 @@ using std::endl;
 * 经常用于函数传参时
 */
 
-class student {
-	string name;
+class Student {
+	string name_;
 public:
 	//引用十分简单 只需要在变量名前面加上&符号即可 如下:
-	student(const string &name) {
+	Student(const string &name) {
 		//可以发现 它可以直接用诶！
-		this->name = name;
+		this->name_ = name;
 		cout << "我的名字叫" << name << endl;
 	}
 
@@ -29,8 +29,8 @@ public:
 	* 如下:
 	*/
 
-	student(const string *name) {
-		this->name = *name;
+	Student(const string *name) {
+		this->name_ = *name;
 	}
 
 	/*
@@ -39,8 +39,8 @@ public:
 	* 如果你不传引用 而是直接使用了以下形式
 	*/
 
-	student(string name) {
-		this->name = name;
+	Student(string name) {
+		this->name_ = name;
 		cout << "我的名字叫" << name << endl;
 	}
 	/*

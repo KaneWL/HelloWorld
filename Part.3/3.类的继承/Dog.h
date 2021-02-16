@@ -6,5 +6,5 @@ class Dog :
 public:
 	//狗狗和大象同理
 	Dog();
-	Dog(const string& name);
+	explicit Dog(const string& name);
 };

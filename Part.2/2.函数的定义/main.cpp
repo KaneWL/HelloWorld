@@ -18,9 +18,13 @@ using std::endl;
 //返回值类型 函数的名称(参数类型 参数名称) { //实现的代码 }
 //这样我们就定义了一个函数
 
+//注意:函数的命名规范应该按照驼峰式命名
+//具体请看: https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/naming/#variable-names 7.6.函数命名
+
+
 //我们定义了一个函数 它返回值类型为int类型
 //它有两个参数 分别为 a和b 他们两个也是int类型的
-int add(int a, int b) {
+int Add(int a, int b) {
 	//当一个函数的返回值类型不为void时 我们都需要返回一个符合类型的值
 	//这里我们返回a+b的结果
 	return a + b;
@@ -28,18 +32,18 @@ int add(int a, int b) {
 
 //预先声明 有这个函数
 //声明的方式很简单 只需要将函数大括号之前的东西全部复制一遍过来即可 并且加上分号 如下
-void foo2();
+void Foo2();
 
 int main() {
 	//函数的调用
-	cout << "1+2的结果是" << add(1, 2) << endl;
+	cout << "1+2的结果是" << Add(1, 2) << endl;
 
 	//执行出错:
-	//C3861: "foo1":找不到标识符
-	//foo1();
+	//C3861: "Foo1":找不到标识符
+	//Foo1();
 
 	//可以调用
-	foo2();
+	Foo2();
 }
 
 //需要注意的是 函数的定义必须处于调用之前 如果你在你需要调用的后面写入了一个函数
@@ -47,13 +51,13 @@ int main() {
 
 //我们定义一个无返回值(void)类型的函数 并且不用传入任何参数
 //然后我们尝试在main函数里调用
-void foo1() {
+void Foo1() {
 	cout << "Hello World" << endl;
 	//由于返回值是void 所以我们可以不写return
 }
 
 //解决方法很简单 我们只需要在调用之前先声明一下有这个函数即可 我们重新写一个函数 并且在main函数之前先声明(31行)
-void foo2() {
+void Foo2() {
 	cout << "Hello World" << endl;
 }
 

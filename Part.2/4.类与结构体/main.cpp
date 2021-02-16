@@ -13,9 +13,9 @@
 * 创建对象的过程称之为实例化
 */
 
-class student {
+class Student {
 	//他有三个成绩 分别是语文 数学 英语
-	int chinese, math, english;
+	int chinese_, math_, english_;
 	//但是 在class里面他默认是private 我们需要让外部访问这三个成绩
 	//那么我们就可以这样声明:
 public:
@@ -23,14 +23,14 @@ public:
 	//在我们开发过程中 变量一般是不暴露给外部的 所以我们写一个setter和getter来设置/获取成绩
 
 	//这是设置语文分数的函数
-	void setChinese(int score) {
+	void set_chinese(int score) {
 		//this指的是这个类本身的对象的指针 访问指针对象的值时使用-> 当然你也可以用. IDE会在你按下确认时自动替换成箭头
-		this->chinese = score;
+		this->chinese_ = score;
 	}
 
 	//这是获取语文分数的函数
-	int getChinese() {
-		return this->chinese;
+	int get_chinese() {
+		return this->chinese_;
 	}
 };
 
@@ -42,7 +42,7 @@ public:
 * 下面我们定义一个结构体 他有三个属性
 * 分别为语文 数学 英语
 */
-struct score {
+struct Score {
 	//默认共有 外部可以直接访问
 	int chinese, math, english;
 private:
@@ -52,28 +52,29 @@ private:
 
 int main() {
 	//实例化也很简单 和声明变量很像 类型 名称
-	student XiaoMing;
+	Student xiao_ming;
 	//调用他的setter
-	XiaoMing.setChinese(100);
+	xiao_ming.set_chinese(100);
 	//尝试访问私有属性出错
 	//错误:成员“学生：中文”(已声明所在行数：18)不可访问
-	//XiaoMing.chinese;
+	//xiao_ming.chinese_;
 
 	//结构体同理
-	score s;
+	Score s;
 	s.chinese = 100;
 	s.english = 80;
 	s.math = 60;
-	//错误:成员"score::i”(已声明所在行数:49)不可访问
+	//错误:成员"Score::i”(已声明所在行数:49)不可访问
 	//s.i = 100;
 }
 
 /* 补充:什么时候用类？什么时候用结构体？
 * 由于在C++中 这两个东西区别并不是很大
-* 不过我们更常用的是类 所以你完全可以使用类 问题不大的
-* 当然如果你想两者都使用的话 建议这样使用
+* 不过我们更常用的是类 所以你完全可以使用类 问题不大
+* 使用建议:
 * 在表示一些数据结构 类型结构 比如一个矩形 一条直线 这种 可以使用结构体(struct)
-* 而表示一种对象的类型 比如学生 老师 这种可能包含多个属性和函数的 那么就使用类
+* 而表示一种对象的类型 比如学生 老师 这种可能包含多个属性和函数的 那么就使用类(class)
+* 如果你捉拿不定 那么就用class 不会有错的
 * 第三章我们会讲到多态继承 多态继承一般也是类的继承 不会使用结构体
-* 所以在C++中 你使用类是完全没有问题的 struct只是为了兼容C做的保留而已
+* 所以在C++中 你使用class是完全没有问题的 struct只是为了兼容C做的保留而已
 */

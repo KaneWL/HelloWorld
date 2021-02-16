@@ -57,5 +57,8 @@ int main() {
 	fridge.Close();
 	//看 也是行得通的  这就是多态的好处！
 
+	//补充:如果把explicit关键词去掉 这个函数调用将变为合法的
+	//fridge.Put({ "小黑" });
+
 	return 0;
 }
