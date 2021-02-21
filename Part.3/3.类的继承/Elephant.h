@@ -15,9 +15,9 @@ public:
 /*
 * 继承的方式很简单 用冒号 访问权限 父类名称 即可继承
 * 访问权限分为三个 public protected private
-* public表示公有 也就是外部所有的人都能看到他父类的属性
-* protected表示保护 表示父类的属性可以被看到 但是不能被修改
-* private表示私有 只有自己可以看到属性
+* public表示公有 外部能看到public的属性和函数
+* protected表示保护 外部无法访问 但是它的子类可以访问
+* private表示私有 只有自己可以访问
 *
 * 一般情况下使用public即可
 */
